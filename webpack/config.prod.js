@@ -34,7 +34,20 @@ module.exports = Object.assign({}, baseConfig, {
       },
       chunksSortMode: 'dependency'
     }),
-    new CopyWebpackPlugin([])
+    new CopyWebpackPlugin([
+      {
+        from: './assets',
+        to: 'assets',
+      },
+      {
+        from: './favicon.png',
+        to: 'favicon.png',
+      },
+      {
+        from: './favicon.ico',
+        to: 'favicon.ico',
+      }
+    ])
   ],
   vue: {
     loaders: {

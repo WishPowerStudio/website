@@ -35,6 +35,11 @@ module.exports = {
       }
     ]
   },
+  postcss: function (webpack) {
+    return [require('postcss-import')({
+      addDependencyTo: webpack
+    }), require('autoprefixer'), require('precss'), require('postcss-custom-media')];
+  },
   babel: {
     presets: ["es2015"],
     plugins: ["transform-runtime"]

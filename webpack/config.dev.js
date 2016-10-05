@@ -17,10 +17,5 @@ module.exports = Object.assign({}, baseConfig, {
       inject: true
     })
   ],
-  postcss: function (webpack) {
-    return [require('postcss-import')({
-      addDependencyTo: webpack
-    }), require('autoprefixer'), require('precss'), require('postcss-custom-media')];
-  },
   devtool: '#eval-source-map'
 });
