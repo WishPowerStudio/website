@@ -7,7 +7,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = Object.assign({}, baseConfig, {
   output: {
-    path: 'dist',
+    path: 'docs',
     filename: 'build.js'
   },
   plugins: [
