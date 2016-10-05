@@ -1,0 +1,218 @@
+@import "base";
+
+#container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0;
+  @media (--laptop-viewport) {
+    transform: scale(0.9);
+  }
+  @media (--mac-viewport) {
+    transform: scale(0.85);
+    padding: 0 50px;
+  }
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    .logo {
+      max-width: 450px;
+      margin-left: -45px;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 32px;
+      color: $orange;
+      margin: 30px 0;
+    }
+    .subtitle {
+      font-size: 22px;
+      color: $grey;
+    }
+  }
+  .right {
+    .planet {
+      max-width: 700px;
+    }
+  }
+}
+
+#intro1 {
+  .main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    z-index: 1;
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      color: $orange;
+      margin-top: 200px;
+      margin-right: 100px;
+    }
+    .bg {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .platform {
+    margin-top: 200px;
+    display: flex;
+    flex-grow: 1;
+    z-index: 1;
+    position: relative;
+    .item {
+      background-color: $green;
+      height: 100px;
+      border-radius: 5px;
+      padding: 20px;
+      width: 100%;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .icon {
+        font-size: 46px;
+        margin-bottom: 10px;
+      }
+      .en {
+        font-family: "Moon-Light";
+        font-size: 16px;
+        margin: 5px 0;
+      }
+      .zh {
+        font-weight: bold;
+      }
+      &.green {
+        background-color: $green;
+      }
+      &.blue {
+        background-color: $blue;
+      }
+      &.orange {
+        background-color: $orange;
+      }
+      &.purple {
+        background-color: $purple;
+      }
+      &.red {
+        background-color: $red;
+      }
+    }
+  }
+}
+
+#intro2 {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    max-width: 500px;
+    .title {
+      font-size: 32px;
+      color: $orange;
+      position: relative;
+      margin-bottom: 60px;
+      font-size: 28px;
+      &::after {
+        content: "";
+        margin-top: 50px;
+        position: absolute;
+        left: 0;
+        border-bottom: 4px solid white;
+        width: 80px;
+        opacity: 0.1;
+      }
+    }
+    .desc2 {
+      margin-top: 30px;
+      opacity: 0.7;
+    }
+    .work {
+      background-color: $blue;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-top: 30px;
+      .fa {
+        margin-left: 5px;
+      }
+    }
+  }
+  .right {
+    .skill {
+      max-width: 450px;
+    }
+  }
+}
+
+#footer {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    display: flex;
+    .scan {
+      text-align: center;
+      .qr {
+        width: 250px;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 40px;
+      padding-left: 40px;
+      border-left: 2px dashed #283946;
+      .head {
+        .title {
+          font-size: 42px;
+        }
+        .subtitle {
+          font-size: 32px;
+        }
+      }
+      .info {
+        .title {
+          font-size: 22px;
+          color: $orange;
+          margin-bottom: 20px;
+        }
+        .desc {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .right {
+    .diamond {
+      max-width: 300px;
+      margin-right: 10px;
+    }
+  }
+}

@@ -17,11 +17,10 @@ module.exports = Object.assign({}, baseConfig, {
       inject: true
     })
   ],
-  vue: {
-    postcss: [require('autoprefixer'), require('precss')],
-    autoprefixer: {
-      browsers: ['last 2 versions']
-    }
+  postcss: function (webpack) {
+    return [require('postcss-import')({
+      addDependencyTo: webpack
+    }), require('autoprefixer'), require('precss'), require('postcss-custom-media')];
   },
   devtool: '#eval-source-map'
 });
