@@ -49,13 +49,10 @@ module.exports = Object.assign({}, baseConfig, {
       }
     ])
   ],
-  vue: {
-    loaders: {
-      css: ExtractTextPlugin.extract("css!postcss")
-    },
-    postcss: [require('autoprefixer'), require('precss')],
-    autoprefixer: {
-      browsers: ['last 2 versions']
-    }
-  },
+  module: {
+    loaders: baseConfig.module.loaders.concat([{
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract('css!postcss')
+    }])
+  }
 });

@@ -14,10 +14,6 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader!postcss-loader'
-      },
-      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {

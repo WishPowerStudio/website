@@ -216,3 +216,13 @@
     }
   }
 }
+
+#copyright {
+  padding: 20px 0;
+  font-size: 14px;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: italic;
+}

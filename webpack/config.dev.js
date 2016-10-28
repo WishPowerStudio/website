@@ -17,5 +17,11 @@ module.exports = Object.assign({}, baseConfig, {
       inject: true
     })
   ],
+  module: {
+    loaders: baseConfig.module.loaders.concat([{
+      test: /\.css$/,
+      loader: 'style-loader!css-loader!postcss-loader'
+    }])
+  },
   devtool: '#eval-source-map'
 });
